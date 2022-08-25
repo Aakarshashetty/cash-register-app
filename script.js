@@ -1,6 +1,4 @@
 const billAmount = document.querySelector("#bill-amount");
-console.log(billAmount.value);
-// console.log("hello");
 const cashGiven = document.querySelector("#cash-given");
 const next = document.querySelector(".next");
 const check = document.querySelector(".check");
@@ -16,8 +14,8 @@ next.addEventListener('click', () => {
     if(billAmount.value.length !== 0){
         hide.style.display = "block"
     }
-    else{
-        alert("Enter valid Bill Amount");
+    else if(billAmount.value.length === 0){
+        errorMessage("Enter valid bill amount")
     }
 });
 check.addEventListener('click', () => {
