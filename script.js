@@ -13,9 +13,10 @@ hide.style.display = "none";
 next.addEventListener('click', () => {
     if(billAmount.value.length !== 0){
         hide.style.display = "block"
+        errorMessage("Enter cash given");
     }
     else if(billAmount.value.length === 0){
-        errorMessage("Enter valid bill amount")
+        errorMessage("Enter valid bill amount");
     }
 });
 check.addEventListener('click', () => {
