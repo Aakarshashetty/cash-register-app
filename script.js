@@ -23,9 +23,9 @@ check.addEventListener('click', () => {
     
     hideError();
     if(billAmount.value > 0) {
-        console.log("cash given ", cashGiven.value);
-        console.log("bill amount ", billAmount.value);
-        if(cashGiven.value >= billAmount.value){
+        console.log("cash given ", typeof cashGiven.value);
+        console.log("bill amount ",typeof billAmount.value);
+        if(Number(cashGiven.value) >= Number(billAmount.value)){
             console.log("true");
             const amount = cashGiven.value - billAmount.value;
             changeToBeGiven(amount);
